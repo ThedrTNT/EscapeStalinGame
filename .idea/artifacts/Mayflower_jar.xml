@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Mayflower:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Mayflower_jar</output-path>
+    <root id="archive" name="Mayflower.jar">
+      <element id="module-output" name="Mayflower" />
+      <element id="library" level="project" name="src" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/mayflower2.12.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

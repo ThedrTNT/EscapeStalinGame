@@ -1,0 +1,90 @@
+v3::
+-made platform and hazard work with scrolling world
+bugs:
+-player spawns at x = 0 of the current screen, not of the entire level
+goals:
+-make player spawn at same point with scroll world (if x = 0 is the beginning of the scroll world, make him spawn at that point even if it is off the screen)
+	-track player location throughout the level
+	-track object location throughout the level
+	-calculate and reset accordingly for every player death
+
+v4::
+-changed tester to be more defined towards edges for testing purposes
+-changed scroll algorithm to allow player to move to edge of screen when at the end of the world
+-player now respawns 100 pixels away from the hazard after colliding in the opposite direction that was being travelled
+bugs:
+-currently only works with one size of scroll world
+goals:
+-abstract scroll code in player constructor to work with multiple world sizes(basically make give it an int in the constructor and just pass it from the world
+
+v5::
+-uhhh I think I added the patrol but it's pretty useless so rip
+
+v6(idk where v5 is lol)::
+-updated death and respawn system so player now spawns at beginning regardless of location within world
+-updated testground by making it a MayflowerImage and passing its width into player constructor (thats how we use multiple world sizes)
+bugs:
+-after first respawn player cannot backtrack on the first 200 pixels of world
+goals:
+-fix bug
+-begin adding collectable objects (keys, letters)
+	-letters: is only important to track for ending of game, very simple
+	-keys: required to move from level to level, not as simple
+-update platforms to have proper collision
+-update platform location and/or jump height
+
+v8::
+-added getter methods for letters and lives
+-when colliding with a hazard the life instance variable is reduced by one
+-if life is zero the world is changed to the game over screen
+-StartScreen displays remaining lives and the amount of letters collected
+-implemented the door
+-if the player does not have a key the door displayes a message
+-if player has key world switches to titlescreen as placeholder
+goals:
+-add in the 2d array because you didn't upload that version
+-start getting the final sprites for every object and begin the process of animating
+
+
+v9(bc ryan is stupid and doesn't save these)::
+-added 2d array level builder
+-everything works as previously, just more simplified for more variation and addition of more than 10 platforms/hazards
+-level size update (width = 5000px height = 768px)
+-added new title screen and title music
+bugs:
+-none really atm
+goals:
+-finish 2 full levels (hazards, keys/doors, letters)
+-add ladders(?)
+-begin work on real assets
+	ideal pace:
+	-title/end screens
+	-background of levels
+	-foreground of levels
+	-platforms
+	-letters
+	-keys
+	-doors
+	-player animations
+
+v9.1::
+-extended length of test world image
+-updated moving label to move with world
+maybe changes:
+-change the randomizing algorithm for level builder
+for sure changes:
+-height of player must decrease by at least 50px
+
+v10::
+-added oof sounds
+-created world 2
+-world switches to next level when key is held
+goals:
+-make the world generation less terrible
+
+v11::
+-added player animations for walking, idle, and jumping
+-updated assets for door, key, platform, letter, and hazard
+
+
+	

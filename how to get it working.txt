@@ -1,0 +1,5 @@
+add mayflower2.12.jar to intellij library
+
+add each .dll file to intellij library
+
+finally, set configuration and make runner your main class
